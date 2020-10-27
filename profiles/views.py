@@ -30,5 +30,4 @@ def profile_detail_api_view(request, username, *args, **kwargs):
             else:
                 pass
     serializer = PublicSerializer(instance=profile_obj)#, context={"request": request})
-    print (serializer.data)
     return Response(serializer.data, status=200)
