@@ -26,7 +26,7 @@ SECRET_KEY = 'z5yadiqk*k(j+ky+^c%q^^xs^41s)wzhdt3u^jo$joqt214teg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['blooming-sierra-71455.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
