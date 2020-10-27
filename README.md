@@ -8,7 +8,7 @@ A user can view all the people who follow a particular user and which user that 
 <h2>In the sqlite database I've stored the following details:<h2>
 
 <h3>Users are:</h3>
-<br>adithya
+adithya
 <br>jim
 <br>tom
 <br>jerry
@@ -29,12 +29,12 @@ Each user has posted 1 tweet.
 ['GET'] URLs:
 
 '/tweets/' - to view all the tweets in the database.
-'/tweets/<int:tweet_id>' - to view a specific tweet in the database.
-'/profile/<str:username>' - to view the details of a user. It contains the people followed by the user and the people who are following the user.
-*have to be logged in to view the following:
-'/tweets/feed' - to view the feed/timeline of a specific user.
-'/tweets/feed/likes/<int:tweet_id> - to view the users who have liked a specific tweet.
-'/tweets/feed/retweet/<int:tweet_id> - to view the users who have retweeted a specific tweet.
+<br>'/tweets/<int:tweet_id>' - to view a specific tweet in the database.
+<br>'/profile/<str:username>' - to view the details of a user. It contains the people followed by the user and the people who are following the user.
+<br><b>*have to be logged in to view the following:</b>
+<br>'/tweets/feed' - to view the feed/timeline of a specific user.
+<br>'/tweets/feed/likes/<int:tweet_id> - to view the users who have liked a specific tweet.
+<br>'/tweets/feed/retweet/<int:tweet_id> - to view the users who have retweeted a specific tweet.
 
 ['POST'] URLs:
 
