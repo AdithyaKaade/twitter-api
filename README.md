@@ -7,7 +7,7 @@ A user can view all the people who follow a particular user and which user that 
 
 In the sqlite database I've stored the following details:
 
-Users are:
+<h1>Users are:</h1>
 
 adithya
 jim
