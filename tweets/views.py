@@ -16,6 +16,7 @@ from .serializers import (
 						TweetActionSeralizer,
 						TweetCreateSerializer,
 						TweetSerializerLikes)
+from profiles.views import profile_detail_api_view
 
 @api_view(['GET'])
 def tweet_detail_view(request, tweet_id, *args, **kwargs):
@@ -81,11 +82,10 @@ def tweet_feed_view(request, *args, **kwargs):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def tweet_feed_likes_view(request, tweet_id, *args, **kwargs):
-
 	time_threshold = datetime.now(timezone.utc) - timedelta(hours=24)
 	user = request.user
-	user_data = requests.get('http://127.0.0.1:8000/profile/'+str(user))
-	following = set(user_data.json()['following_count'])
+	user_data = profile_detail_api_view(request._request,user)
+	following = set(user_data.data['following'])
 	following.add(str(user))
 	qs = Tweet.objects.feed(user).filter(
             Q(time__gte=time_threshold) &
@@ -112,8 +112,8 @@ def tweet_list_view(request, *args, **kwargs):
 @api_view(['GET'])
 def tweet_feed_retweet_view(request, tweet_id, *args, **kwargs):
 	user = request.user
-	user_data = requests.get('http://127.0.0.1:8000/profile/'+str(user))
-	following = set(user_data.json()['following_count'])
+	user_data = profile_detail_api_view(request._request,user)
+	following = set(user_data.data['following'])
 	following.add(str(user))
 	qs = Tweet.objects.all().filter(
 							#Q( ) |
