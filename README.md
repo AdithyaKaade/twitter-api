@@ -14,17 +14,14 @@ adithya
 <br>jerry
 
 <h3>Following relationship : (eg. A -> B,C. Here it means 'A' is following 'B' and 'C')</h3>
-
-<br>adithya: jim, tom, jerry
+adithya: jim, tom, jerry
 <br>jim: tom, jerry
 <br>tom: jerry, adithya
 <br>jerry: adithya, jim
 
 <h3>Details about tweets:</h3>
-
 Each user has posted 1 tweet.
 <br>Each user likes and rewteets all the tweets on their feed, except for their own tweet.
-
 
 <h3>['GET'] URLs:</h3>
 '/tweets/' - to view all the tweets in the database.
