@@ -5,25 +5,25 @@ A user can like or retweet tweets on their feed.
 A user can see who has liked or tweeted a particular tweet, given that the user follows that specific person.
 A user can view all the people who follow a particular user and which user that specific user is following. 
 
-In the sqlite database I've stored the following details:
+<h2>In the sqlite database I've stored the following details:<h2>
 
-<h2>Users are:</h2>
+<h3>Users are:</h3>
 <br>adithya
 <br>jim
 <br>tom
 <br>jerry
 
-Following relationship : (eg. A -> B,C. Here it means 'A' is following 'B' and 'C')
+<h3>Following relationship : (eg. A -> B,C. Here it means 'A' is following 'B' and 'C')</h3>
 
-adithya: jim, tom, jerry
-jim: tom, jerry
-tom: jerry, adithya
-jerry: adithya, jim
+<br>adithya: jim, tom, jerry
+<br>jim: tom, jerry
+<br>tom: jerry, adithya
+<br>jerry: adithya, jim
 
-Details about tweets:
+<h3>Details about tweets:</h3>
 
 Each user has posted 1 tweet.
-Each user likes and rewteets all the tweets on their feed, except for their own tweet.
+<br>Each user likes and rewteets all the tweets on their feed, except for their own tweet.
 
 
 ['GET'] URLs:
