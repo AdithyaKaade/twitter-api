@@ -26,8 +26,7 @@ Each user has posted 1 tweet.
 <br>Each user likes and rewteets all the tweets on their feed, except for their own tweet.
 
 
-['GET'] URLs:
-
+<h3>['GET'] URLs:</h3>
 '/tweets/' - to view all the tweets in the database.
 <br>'/tweets/<int:tweet_id>' - to view a specific tweet in the database.
 <br>'/profile/<str:username>' - to view the details of a user. It contains the people followed by the user and the people who are following the user.
@@ -35,15 +34,10 @@ Each user has posted 1 tweet.
 <br>'/tweets/feed' - to view the feed/timeline of a specific user.
 <br>'/tweets/feed/likes/<int:tweet_id> - to view the users who have liked a specific tweet.
 <br>'/tweets/feed/retweet/<int:tweet_id> - to view the users who have retweeted a specific tweet.
-
-['POST'] URLs:
-
-*have to be logged in to perfom this action
-'/tweets/create-tweet' - creates a new tweet with the given content.
-'/tweets/action' - the action can be like, unlike or retweet. We need to provide the tweet_id, action and content. If the action is like or unlike we don't have to provide the content.
-'/profile/<str:username>' - the action can be either follow or unfollow depending on what the user logged in wants to perform.
-
-
-['DELETE'] URL:
-
+<h3>['POST'] URLs:</h3>
+<b>*have to be logged in to perfom this action</b>
+<br>'/tweets/create-tweet' - creates a new tweet with the given content.
+<br>'/tweets/action' - the action can be like, unlike or retweet. We need to provide the tweet_id, action and content. If the action is like or unlike we don't have to provide the content.
+<br>'/profile/<str:username>' - the action can be either follow or unfollow depending on what the user logged in wants to perform.
+<h3>['DELETE'] URL:</h3>
 '/tweets/<int:tweet_id>/delete' - to delete a specific tweet in the database.
