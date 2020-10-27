@@ -1,9 +1,9 @@
 # twitter-api
 
 Here we have the backend of a twitter like program, where a user can view their feed(timeline) containing all tweets in the past 24hrs by the user and the people they follow. 
-A user can like or retweet tweets on their feed.
-A user can see who has liked or tweeted a particular tweet, given that the user follows that specific person.
-A user can view all the people who follow a particular user and which user that specific user is following. 
+<br>A user can like or retweet tweets on their feed.
+<br>A user can see who has liked or tweeted a particular tweet, given that the user follows that specific person.
+<br>A user can view all the people who follow a particular user and which user that specific user is following. 
 
 <h2>In the sqlite database I've stored the following details:<h2>
 
